@@ -10,5 +10,17 @@
   },
   "scripts": {
     "test": "node test"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/caiguanhao/pinyin_index/issues"
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "chinese",
+    "character",
+    "pinyin"
+  ]
 }
