@@ -1,0 +1,14 @@
+{
+  "name": "pinyin_index",
+  "version": "0.0.1",
+  "description": "A fast Chinese characters to pinyins conversion/romanization tool for indexing use.",
+  "author": "caiguanhao <caiguanhao@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caiguanhao/pinyin_index.git"
+  },
+  "scripts": {
+    "test": "node test"
+  }
+}
