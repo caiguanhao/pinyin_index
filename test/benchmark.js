@@ -29,14 +29,22 @@ var results = {};
 suite.on('cycle', function(event) {
   console.log(String(event.target));
   var name = JSON.parse(event.target.name);
-  results[name.type] = results[name.type] || {};
-  results[name.type][name.length] = event.target.hz;
+  results[name.length] = results[name.length] || {};
+  results[name.length][name.type] = event.target.hz;
   total_time += event.target.times.elapsed;
 });
 
 suite.on('complete', function() {
   console.log('Time used ' + total_time + ' seconds.');
-  console.log(results);
+  function b(t, l) {
+    t += '';
+    return l - t.length > 0 ? t + Array(l - t.length + 1).join(' ') : t.slice(0, l);
+  }
+  console.log(  "| characters | type: 'string'     | type: 'int'        |");
+  console.log(  "|------------|--------------------|--------------------|");
+  for (var a in results) {
+    console.log("| " + b(a, 10) + " | " + b(results[a].string, 18) + " | " + b(results[a].int, 18) + " |");
+  }
 });
 
 suite.run({ 'async': true });

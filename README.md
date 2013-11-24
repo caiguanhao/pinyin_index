@@ -9,5 +9,17 @@ A fast Chinese characters to pinyins conversion/romanization tool for indexing u
     // { full: 'tianshengwocaibiyouyong，qianjinsanjinhuanfulai。',
     //   abbr: 'tswcbyy qjsjhfl' }
 
+### Performance
+
+| characters | type: 'string'     | type: 'int'        |
+|------------|--------------------|--------------------|
+| 1          | 30957.93088538371  | 36193.70387053227  |
+| 3          | 22774.639332214894 | 35756.25319353396  |
+| 11         | 12717.489952800504 | 33896.05136466831  |
+| 29         | 6629.282427042972  | 31086.750626590918 |
+| 56         | 3856.200979658138  | 26386.000189447706 |
+
+Measured in ops/sec on a Mac Mini 2012 with 2.3GHz i7 CPU and 16GB RAM.
+
 LICENSE: MIT  
 Developer: caiguanhao &lt;caiguanhao@gmail.com&gt;  
