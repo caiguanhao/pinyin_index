@@ -28,3 +28,16 @@ assert.deepEqual(
   },
   'Uncommon characters should return nothing.'
 );
+
+assert.deepEqual(
+  pinyin_index('天生我材必有用，千金散尽还复来。', {
+    output: function(pinyin_array, replaced) {
+      return pinyin_array;
+    }
+  }),
+  [
+    [ 'tian', 'sheng', 'wo', 'cai', 'bi', 'you', 'yong' ],
+    [ 'qian', 'jin', 'san', 'jin', 'huan', 'fu', 'lai' ]
+  ],
+  'Custom output should return customized results.'
+);
