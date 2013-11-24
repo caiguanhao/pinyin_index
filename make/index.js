@@ -1,11 +1,11 @@
 /* make int js and json files based on string js and json files */
 
-var common_characters = require('../lib/string.common_characters.json').common_characters;
-var string_common_characters_index_js = __dirname + '/../lib/string.common_characters.index.js';
-var string_common_characters_index = require(string_common_characters_index_js);
+var common_characters = require('../lib/string/common.characters.json').common_characters;
+var string_index_js = __dirname + '/../lib/string/index.js';
+var string_index = require(string_index_js);
 var fs = require('fs');
 
-fs.readFile(string_common_characters_index_js, function(err, file) {
+fs.readFile(string_index_js, function(err, file) {
   if (err) throw err;
 
   var pinyins = [];
@@ -16,7 +16,7 @@ fs.readFile(string_common_characters_index_js, function(err, file) {
   pinyins.sort();
 
   fs.writeFile(
-    __dirname + '/../lib/int.common_characters.pinyin.json',
+    __dirname + '/../lib/int/common.pinyins.json',
     JSON.stringify(pinyins, null, 2) + '\n',
     function(err) {
       if (err) throw err;
@@ -25,12 +25,12 @@ fs.readFile(string_common_characters_index_js, function(err, file) {
 
   var ints = {};
   for (var i = 0, l = common_characters.length; i < l; i++) {
-    var pinyin = string_common_characters_index(common_characters[i]).full;
+    var pinyin = string_index(common_characters[i]);
     ints[common_characters[i].charCodeAt(0)] = pinyins.indexOf(pinyin);
   }
 
   fs.writeFile(
-    __dirname + '/../lib/int.common_characters.json',
+    __dirname + '/../lib/int/common.characters.json',
     JSON.stringify(ints, null, 2) + '\n',
     function(err) {
       if (err) throw err;
