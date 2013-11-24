@@ -7,7 +7,8 @@ assert.deepEqual(
   {
     full: 'tianshengwocaibiyouyong，qianjinsanjinhuanfulai。',
     abbr: 'tswcbyy qjsjhfl'
-  }
+  },
+  'Int method should work properly.'
 );
 
 assert.deepEqual(
@@ -15,5 +16,15 @@ assert.deepEqual(
   {
     full: 'tianshengwocaibiyouyong，qianjinsanjinhuanfulai。',
     abbr: 'tswcbyy qjsjhfl'
-  }
+  },
+  'String method should work properly.'
+);
+
+assert.deepEqual(
+  pinyin_index('犇猋骉蟲麤毳淼掱焱垚'),
+  {
+    full: '',
+    abbr: ''
+  },
+  'Uncommon characters should return nothing.'
 );
