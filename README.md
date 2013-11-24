@@ -21,5 +21,7 @@ A fast Chinese characters to pinyins conversion/romanization tool for indexing u
 
 Measured in ops/sec on a Mac Mini 2012 with 2.3GHz i7 CPU and 16GB RAM.
 
+![benchmark](https://raw.github.com/caiguanhao/pinyin_index/master/test/benchmark.png)
+
 LICENSE: MIT  
 Developer: caiguanhao &lt;caiguanhao@gmail.com&gt;  
