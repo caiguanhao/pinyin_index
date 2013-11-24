@@ -13,6 +13,8 @@ fs.readFile(string_common_characters_index_js, function(err, file) {
     pinyins.push(/return '(.+?)';/.exec(pinyin)[1]);
   });
 
+  pinyins.sort();
+
   fs.writeFile(
     __dirname + '/../lib/int.common_characters.pinyin.json',
     JSON.stringify(pinyins, null, 2) + '\n',
