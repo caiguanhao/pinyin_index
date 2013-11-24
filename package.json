@@ -22,5 +22,8 @@
     "chinese",
     "character",
     "pinyin"
-  ]
+  ],
+  "devDependencies": {
+    "benchmark": "1.0.0"
+  }
 }
