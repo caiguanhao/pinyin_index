@@ -9,3 +9,11 @@ assert.deepEqual(
     abbr: 'tswcbyy qjsjhfl'
   }
 );
+
+assert.deepEqual(
+  pinyin_index('天生我材必有用，千金散尽还复来。', { type: 'string' }),
+  {
+    full: 'tianshengwocaibiyouyong，qianjinsanjinhuanfulai。',
+    abbr: 'tswcbyy qjsjhfl'
+  }
+);
