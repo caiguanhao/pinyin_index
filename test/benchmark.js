@@ -3,7 +3,7 @@ var pinyin_index = require('../');
 var Benchmark = require('benchmark');
 var suite = new Benchmark.Suite;
 
-var types = [ 'int', 'string' ];
+var types = [ 'int', 'string', 'object' ];
 
 var total_time = 0;
 
@@ -40,10 +40,10 @@ suite.on('complete', function() {
     t += '';
     return l - t.length > 0 ? t + Array(l - t.length + 1).join(' ') : t.slice(0, l);
   }
-  console.log(  "| characters | type: 'string'     | type: 'int'        |");
-  console.log(  "|------------|--------------------|--------------------|");
+  console.log(  "| characters | type: 'string'     | type: 'int'        | type: 'object'     |");
+  console.log(  "|------------|--------------------|--------------------|--------------------|");
   for (var a in results) {
-    console.log("| " + b(a, 10) + " | " + b(results[a].string, 18) + " | " + b(results[a].int, 18) + " |");
+    console.log("| " + b(a, 10) + " | " + b(results[a].string, 18) + " | " + b(results[a].int, 18) + " | " + b(results[a].object, 18) + " |");
   }
 });
 

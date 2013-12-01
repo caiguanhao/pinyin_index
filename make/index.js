@@ -36,4 +36,25 @@ fs.readFile(string_index_js, function(err, file) {
       if (err) throw err;
     }
   );
+
+  var object = {};
+  for (var i = 0, l = common_characters.length; i < l; i++) {
+    object[common_characters[i]] = pinyins.indexOf(string_index(common_characters[i]));
+  }
+
+  fs.writeFile(
+    __dirname + '/../lib/object/common.pinyins.json',
+    JSON.stringify(pinyins, null, 2) + '\n',
+    function(err) {
+      if (err) throw err;
+    }
+  );
+
+  fs.writeFile(
+    __dirname + '/../lib/object/common.characters.json',
+    JSON.stringify(object, null, 2) + '\n',
+    function(err) {
+      if (err) throw err;
+    }
+  );
 });

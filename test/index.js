@@ -21,6 +21,15 @@ assert.deepEqual(
 );
 
 assert.deepEqual(
+  pinyin_index('天生我材必有用，千金散尽还复来。', { type: 'object' }),
+  {
+    full: 'tianshengwocaibiyouyong，qianjinsanjinhuanfulai。',
+    abbr: 'tswcbyy qjsjhfl'
+  },
+  'Object method should work properly.'
+);
+
+assert.deepEqual(
   pinyin_index('犇猋骉蟲麤毳淼掱焱垚'),
   {
     full: '',
