@@ -1,6 +1,6 @@
 {
   "name": "pinyin_index",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A fast Chinese characters to pinyins conversion/romanization tool for indexing use.",
   "author": "caiguanhao <caiguanhao@gmail.com>",
   "license": "MIT",
