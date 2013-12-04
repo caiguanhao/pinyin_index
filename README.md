@@ -1,6 +1,8 @@
 pinyin_index
 ============
 
+[![Build Status](https://travis-ci.org/caiguanhao/pinyin_index.png?branch=master)](https://travis-ci.org/caiguanhao/pinyin_index)
+
 A fast Chinese characters to pinyins conversion/romanization tool for indexing use.
 
 It's much more convenient to type pinyin (especially the pinyin abbreviations) than Chinese characters when you search something.
@@ -52,6 +54,8 @@ Measured in ops/sec on a Mac Mini 2012 with 2.3GHz i7 CPU and 16GB RAM.
 ![benchmark](https://raw.github.com/caiguanhao/pinyin_index/master/test/benchmark.png)
 
 For the best performance, you may fork and simplify this repo to best suit your project.
+
+See also: [jquery-hanzi2pinyin](https://github.com/caiguanhao/jquery-hanzi2pinyin)
 
 LICENSE: MIT  
 Developer: caiguanhao &lt;caiguanhao@gmail.com&gt;  
